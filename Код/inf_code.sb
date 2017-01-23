@@ -1,0 +1,166 @@
+originalpass = "105043"
+WasPassChanged = "False"
+count = 0
+TextWindow.WriteLine("Добро пожаловать в Тесты по информатике: раздел Pascal!!!")
+TextWindow.WriteLine("Copyright IS Studio (R) 2014")
+TextWindow.WriteLine("IF ALL TEXT INCLUDE THIS SEEN YOU WITH ISSUES IT MEANS WHAT YOU PC HAVE NOT GOT RUSSIAN LANGUAGE PACK")
+TextWindow.WriteLine("Для смены учительского пароля нажмите 1 и Enter. Для начала тестирования нажмите 2 и Enter:")
+answ = TextWindow.Read()
+If answ = "1" Then
+  TextWindow.WriteLine("Вас приветствует утилита смены учительского пароля. Введите действующий пароль (он соответствует номеру поставки) и нажмите Enter:")
+  teacherpass = TextWindow.Read()
+  While teacherpass <> originalpass 
+    TextWindow.WriteLine("Пароль введен неверно. Повторите попытку:")
+    teacherpass = TextWindow.Read()
+  EndWhile
+  TextWindow.WriteLine("Введите новый пароль:")
+  originalpass = TextWindow.Read()
+  WasPassChanged = "True"
+  TextWindow.WriteLine("Пароль изменен. Начинается тестирование...")
+EndIf
+TextWindow.WriteLine("Введите свою фамилию, имя и отчество и нажмите Enter:")
+FIO = TextWindow.Read()
+TextWindow.WriteLine("Сейчас Вам будет предложено ответить на 10 тестовых вопросов, а также написать небольшую программу на языке Pascal.")
+TextWindow.WriteLine("Вопрос №1. С какого слова начинается ЛЮБАЯ программа на языке Pascal? Напечатайте это слово на клавиатуре маленькими буквами и нажмите Enter:")
+answ1 = TextWindow.Read()
+If answ1 = "program" Then
+  count = count + 1
+EndIf
+TextWindow.WriteLine("Вопрос №2. Какого типа переменной не существует в языке Pascal? Введите цифру ответа и нажмите Enter. Варианты ответа:")
+TextWindow.WriteLine("1) comp;")
+TextWindow.WriteLine("2) extended;")
+TextWindow.WriteLine("3) double;")
+TextWindow.WriteLine("4) string;")
+answ2 = TextWindow.Read()
+If answ2 = "3" Then
+  count = count + 1
+EndIf
+TextWindow.WriteLine("Вопрос №3. Каким будет значение переменной p после выполнения Листинга-1? Сейчас Вам будет представлен Листинг-1. Введите цифру ответа и нажмите Enter:")
+TextWindow.WriteLine("ЛИСТИНГ-1")
+TextWindow.WriteLine("    1. p:= 0;")
+TextWindow.WriteLine("    2. for i:= 1 downto 1000 do")
+TextWindow.WriteLine("    3. p:= p + 345")
+TextWindow.WriteLine("КОНЕЦ ЛИСТИНГА-1")
+TextWindow.WriteLine("Варианты ответа:")
+TextWindow.WriteLine("1) p = 345;")
+TextWindow.WriteLine("2) p = 0;")
+TextWindow.WriteLine("3) p = -345000")
+TextWindow.WriteLine("4) p = 345000")
+answ3 = TextWindow.Read()
+If answ3 = "2" Then
+  count = count + 1
+EndIf
+TextWindow.WriteLine("Вопрос №4. Петя хочет найти все решения от 1 до 1000 Диофантова уравнения вида a*x^3 + b*x^2 + c*x + d = 0 (знак * означает умножение, а знак ^ - возведение в степень. Возведение в степень выполняется раньше всего). Каким оператором цикла лучше всего воспользоваться Пете? Введите этот оператор с маленькой буквы и нажмите Enter:")
+answ4 = TextWindow.Read()
+If answ4 = "for" Then
+  count = count + 1
+EndIf
+TextWindow.WriteLine("Вопрос №5. С какого слова начинается описание функции в Pascal? Введите это слово с маленькой буквы и нажмите Enter:")
+answ5 = TextWindow.Read()
+If answ5 = "function" Then
+  count = count + 1
+EndIf
+TextWindow.WriteLine("Вопрос №6. Какой символ можно использовать для названия программы после слова program? Введите цифру ответа и нажмите Enter:")
+TextWindow.WriteLine("1) %")
+TextWindow.WriteLine("2) &")
+TextWindow.WriteLine("3) $")
+TextWindow.WriteLine("4) _")
+answ6 = TextWindow.Read()
+If answ6 = "4" Then
+  count = count + 1
+EndIf
+TextWindow.WriteLine("Вопрос №7. Каким будет значение переменной p после выполнения Листинга-2? Сейчас Вам будет представлен Листинг-2. Введите цифру ответа и нажмите Enter:")
+TextWindow.WriteLine("ЛИСТИНГ-2")
+TextWindow.WriteLine("    1. p:= 0;")
+TextWindow.WriteLine("    2. for i:= 1 to 5 do")
+TextWindow.WriteLine("    3. p:= p + 2;")
+TextWindow.WriteLine("    4. p:= p * 10")
+TextWindow.WriteLine("КОНЕЦ ЛИСТИНГА-2")
+TextWindow.WriteLine("Варианты ответа:")
+TextWindow.WriteLine("1) p = 100")
+TextWindow.WriteLine("2) p = 10")
+TextWindow.WriteLine("3) p = 222220")
+TextWindow.WriteLine("4) p = 0")
+answ7 = TextWindow.Read()
+If answ7 = "1" Then
+  count = count + 1
+EndIf
+TextWindow.WriteLine("Вопрос №8. Каким будет значение переменной p после выполнения Листинга-3? Сейчас Вам будет представлен Листинг-3 и варианты ответа. Введите цифру ответа и нажмите Enter:")
+TextWindow.WriteLine("ЛИСТИНГ-3")
+TextWindow.WriteLine("    1. p:= 0;")
+TextWindow.WriteLine("    2. for i:= 1 to 5 do")
+TextWindow.WriteLine("    3. begin")
+TextWindow.WriteLine("    4.   p:= p + 2;")
+TextWindow.WriteLine("    5.   p:= p * 10;")
+TextWindow.WriteLine("    6. end.")
+TextWindow.WriteLine("КОНЕЦ ЛИСТИНГА-3")
+TextWindow.WriteLine("1) p = 100")
+TextWindow.WriteLine("2) p = 10")
+TextWindow.WriteLine("3) p = 222220")
+TextWindow.WriteLine("4) p = 0")
+answ8 = TextWindow.Read()
+If answ8 = "3" Then
+  count = count + 1
+EndIf
+TextWindow.WriteLine("Вопрос №9. Чему равносильно логическое выражение (not(A) and not(B))? Введите цифру ответа и нажмите Enter. Варианты ответа:")
+TextWindow.WriteLine("1) not(A) and B or A")
+TextWindow.WriteLine("2) A or B")
+TextWindow.WriteLine("3) not(a or not(B))")
+TextWindow.WriteLine("4) A and B")
+answ9 = TextWindow.Read()
+If answ9 = "2" Then
+  count = count + 1
+EndIf
+TextWindow.WriteLine("Вопрос №10. Пете нужно сравнить два числа A и B. Он написал программу, представленную в Листинге-4. Каким качеством НЕ обладает эта программа? Сейчас Вам будет представлен Листинг-4 и варианты ответа. Введите цифру ответа и нажмите Enter:")
+TextWindow.WriteLine("ЛИСТИНГ-4")
+TextWindow.WriteLine("    1. esli A > B do")
+TextWindow.WriteLine("    2. writeln(A)")
+TextWindow.WriteLine("КОНЕЦ ЛИСТИНГА-4")
+TextWindow.WriteLine("Варианты ответа:")
+TextWindow.WriteLine("1) результативность")
+TextWindow.WriteLine("2) достоверность")
+TextWindow.WriteLine("3) актуальность")
+TextWindow.WriteLine("4) понятность")
+answ10 = TextWindow.Read()
+If answ10 = "4" Then
+  count = count + 1
+EndIf
+If count < 5 Then
+  TextWindow.WriteLine("Задача: Заданы две клетки шахматной доски. Если они покрашены в один цвет, то выведите слово YES, а если в разные цвета – то NO. Код сохраните в личной папке.")
+ElseIf 5 <= count < 9 Then
+  TextWindow.WriteLine("Задача: Выведите (через пробел) все четные числа от a до b (включительно). Код сохраните в личной папке.")
+Else
+  TextWindow.WriteLine("Задача: Дана последовательность, состоящая из n чисел. Выясните, сколько раз в ней встречается минимальное число. Сначала вводится число n, а потом последовательность. Код сохраните в личной папке.")
+EndIf
+TextWindow.WriteLine("Тестирование окончено. Введите учительский пароль для просмотра результатов:")
+teacherpass = TextWindow.Read()
+While teacherpass <> originalpass
+  TextWindow.WriteLine("Пароль введен неверно. Повторите попытку:")
+  teacherpass = TextWindow.Read()
+EndWhile
+If WasPassChanged = "True" Then
+  TextWindow.WriteLine("[поставочный пароль был изменен]")
+EndIf
+If count = 0 Then
+  otvet = " правильных ответов)."
+ElseIf count = 1 Then
+  otvet = " правильный ответ)."
+ElseIf 2 <= count <= 4 Then
+  otvet = " правильных ответа)."
+Else
+  otvet = " правильных ответов)."
+EndIf
+TextWindow.WriteLine("Тестируемый: " + FIO)
+TextWindow.WriteLine("Результат тестирования: " + count * 10 + "% (" + count + otvet) 
+TextWindow.WriteLine("Ответы на вопросы, введенные тестируемым:")
+TextWindow.WriteLine("Ответ-1:    " + answ1)
+TextWindow.WriteLine("Ответ-2:    " + answ2)
+TextWindow.WriteLine("Ответ-2:    " + answ3)
+TextWindow.WriteLine("Ответ-4:    " + answ4)
+TextWindow.WriteLine("Ответ-5:    " + answ5)
+TextWindow.WriteLine("Ответ-6:    " + answ6)
+TextWindow.WriteLine("Ответ-7:    " + answ7)
+TextWindow.WriteLine("Ответ-8:    " + answ8)
+TextWindow.WriteLine("Ответ-9:    " + answ9)
+TextWindow.WriteLine("Ответ-10:    " + answ10)
+TextWindow.WriteLine("По всем вопросам обращаться на is-studio2013@yandex.ru")
